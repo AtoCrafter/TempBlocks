@@ -6,7 +6,7 @@ import net.minecraft.item.ItemBlock
 import net.minecraft.world.World
 
 class BlockFrame extends BlockTemp(Material.wood) {
-  setBlockName("Frame")
+  setBlockName("FrameBlock")
 
   override def onBlockActivated(world: World, x: Int, y: Int, z: Int, player: EntityPlayer, side: Int, f1: Float, f2: Float, f3: Float): Boolean = {
     Option(player.getHeldItem) match {
