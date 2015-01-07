@@ -1,15 +1,12 @@
 package ato.tempblocks.block
 
-import net.minecraft.block.Block
 import net.minecraft.block.material.Material
-import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.ItemBlock
 import net.minecraft.world.World
 
-class BlockFrame extends Block(Material.wood) {
+class BlockFrame extends BlockTemp(Material.wood) {
   setBlockName("Frame")
-  setCreativeTab(CreativeTabs.tabBlock)
 
   override def onBlockActivated(world: World, x: Int, y: Int, z: Int, player: EntityPlayer, side: Int, f1: Float, f2: Float, f3: Float): Boolean = {
     Option(player.getHeldItem) match {
