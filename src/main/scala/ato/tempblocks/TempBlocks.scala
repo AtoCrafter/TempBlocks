@@ -1,8 +1,10 @@
 package ato.tempblocks
 
+import ato.tempblocks.block.BlockFrame
 import ato.tempblocks.proxy.ProxyCommon
 import cpw.mods.fml.common.Mod.EventHandler
 import cpw.mods.fml.common.event.FMLPreInitializationEvent
+import cpw.mods.fml.common.registry.GameRegistry
 import cpw.mods.fml.common.{Mod, SidedProxy}
 
 @Mod(modid = "TempBlocks", modLanguage = "scala")
@@ -14,7 +16,10 @@ object TempBlocks {
   )
   var proxy: ProxyCommon = _
 
+  val blockFrame = new BlockFrame()
+
   @EventHandler
   def preInit(event: FMLPreInitializationEvent) {
+    GameRegistry.registerBlock(blockFrame, "Frame")
   }
 }
