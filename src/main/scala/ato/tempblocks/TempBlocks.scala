@@ -1,6 +1,6 @@
 package ato.tempblocks
 
-import ato.tempblocks.block.{BlockCollapse, BlockFrame}
+import ato.tempblocks.block.{BlockChain, BlockCollapse, BlockFrame}
 import ato.tempblocks.proxy.ProxyCommon
 import ato.tempblocks.tileentity.TileEntityCollapse
 import cpw.mods.fml.common.Mod.EventHandler
@@ -19,11 +19,13 @@ object TempBlocks {
 
   val blockFrame = new BlockFrame()
   val blockCollapse = new BlockCollapse()
+  val blockChain = new BlockChain()
 
   @EventHandler
   def preInit(event: FMLPreInitializationEvent) {
     GameRegistry.registerBlock(blockFrame, "FrameBlock")
     GameRegistry.registerBlock(blockCollapse, "CollapseBlock")
+    GameRegistry.registerBlock(blockChain, "ChainBlock")
 
     GameRegistry.registerTileEntity(classOf[TileEntityCollapse], "CollapseBlock")
   }
