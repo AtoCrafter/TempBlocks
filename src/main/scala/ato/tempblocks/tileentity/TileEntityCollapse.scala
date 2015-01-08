@@ -4,7 +4,9 @@ import net.minecraft.tileentity.TileEntity
 
 class TileEntityCollapse extends TileEntity {
 
-  var life = TileEntityCollapse.MaxLife
+  var life = 0
+
+  repair
 
   override def updateEntity() {
     life -= 1
@@ -13,6 +15,8 @@ class TileEntityCollapse extends TileEntity {
       getWorldObj.setBlockToAir(xCoord, yCoord, zCoord)
     }
   }
+
+  def repair = life = TileEntityCollapse.MaxLife
 }
 
 object TileEntityCollapse {
