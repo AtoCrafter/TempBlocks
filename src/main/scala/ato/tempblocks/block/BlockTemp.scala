@@ -13,4 +13,6 @@ abstract class BlockTemp(material: Material) extends Block(material) {
   override def quantityDropped(random: Random): Int = 0
 
   override def canSilkHarvest: Boolean = true
+
+  override def isOpaqueCube: Boolean = false
 }

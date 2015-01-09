@@ -7,8 +7,8 @@ import net.minecraft.tileentity.TileEntity
 import net.minecraft.world.World
 
 class BlockCollapse extends BlockTemp(Material.glass) with ITileEntityProvider {
-
   setBlockName("CollapseBlock")
+  setBlockTextureName("glass")
 
   override def createNewTileEntity(world: World, meta: Int): TileEntity =
     new TileEntityCollapse()

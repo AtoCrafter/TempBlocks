@@ -6,8 +6,8 @@ import net.minecraft.block.material.Material
 import net.minecraft.world.World
 
 class BlockChain extends BlockTemp(Material.glass) {
-
   setBlockName("ChainBlock")
+  setBlockTextureName("mob_spawner")
 
   override def breakBlock(world: World, x: Int, y: Int, z: Int, block: Block, meta: Int): Unit = {
     val neighbors = List(
