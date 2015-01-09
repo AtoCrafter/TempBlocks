@@ -1,3 +1,6 @@
+[![Build Status](https://drone.io/github.com/AtoCrafter/TempBlocks/status.png)](https://drone.io/github.com/AtoCrafter/TempBlocks/latest)
+
+
 # TempBlocks
 
 Minecraft MOD
