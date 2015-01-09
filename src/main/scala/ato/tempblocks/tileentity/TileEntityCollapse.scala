@@ -1,12 +1,11 @@
 package ato.tempblocks.tileentity
 
+import net.minecraft.nbt.NBTTagCompound
 import net.minecraft.tileentity.TileEntity
 
 class TileEntityCollapse extends TileEntity {
 
-  var life = 0
-
-  repair
+  var life = 20 * 3
 
   override def updateEntity() {
     life -= 1
@@ -16,9 +15,13 @@ class TileEntityCollapse extends TileEntity {
     }
   }
 
-  def repair = life = TileEntityCollapse.MaxLife
-}
+  override def writeToNBT(nbttag: NBTTagCompound): Unit = {
+    super.writeToNBT(nbttag)
+    nbttag.setByte("CollapseLife", life.toByte)
+  }
 
-object TileEntityCollapse {
-  val MaxLife = 20 * 3
+  override def readFromNBT(nbttag: NBTTagCompound): Unit = {
+    super.readFromNBT(nbttag)
+    life = nbttag.getByte("CollapseLife")
+  }
 }
